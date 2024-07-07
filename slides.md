@@ -49,8 +49,6 @@ backgroundSize: 80%
 
 About myself
 
-<v-clicks>
-
 I’m a Gopher since 2018
 - Practised via the [Tour of Go](https://go.dev/tour/) and [exercism](https://exercism.org/)
 
@@ -62,8 +60,6 @@ I previously worked in Java, Scala and C++
 
 Besides programming I enjoy swimming, cooking and learning languages
 - GOのワークショップへようこそ！
-
-</v-clicks>
 
 <!-- 
 Bio: I'm Michele, Italian from Sicily, I am a passionate Gopher since 2018 and before then I used to work in Java, Scala and C++. I always like make side projects and develop new things when time let's me :D. Besides programming, I enjoy swimming, cooking and learning languages; currently, I'm learning Japanese: GOのワークショップへようこそ！ 
