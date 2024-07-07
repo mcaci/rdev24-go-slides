@@ -155,6 +155,15 @@ A full ecosystem of language, toolchain and resources
 
 ---
 transition: fade-out
+layout: image
+image: /images/meetupLocations.png
+backgroundSize: 90%
+---
+
+# A lively community
+
+---
+transition: fade-out
 layout: lblue-fact
 ---
 
@@ -168,7 +177,7 @@ transition: fade-out
 
 Let's setup our first Go project
 
-```bash {all|3|4|all}{at:2}
+```bash {all|3|4}{at:2}
 $ GIT_PLATFORM_URL=github.com; USER=mcaci; PROJECT_NAME=letsgo
 $ mkdir -p ~/go/src/$GIT_PLATFORM_URL/$USER/$PROJECT_NAME && cd ~/go/src/$GIT_PLATFORM_URL/$USER/$PROJECT_NAME
 $ go mod init
@@ -557,7 +566,7 @@ layout: two-cols-header
 
 # Types in Go
 
-What can we assign to variables
+primitive, internal, custom
 
 ::left::
 
@@ -579,7 +588,7 @@ What can we assign to variables
 
 ::right::
 
-```go{all|1|2-3|4|6-8|9-15|9-15|16-18|19|all}{at:2}
+```go{none|1|2-3|4|6-8|9-15|9-15|16-18|19|all}{at:2}
 string
 [u|]int[|8|16|32|64], float[32|64], complex[64|128]
 byte, rune // aliases for uint8 and int
@@ -626,7 +635,7 @@ They work as in C/C++: use `*` to declare a pointer and to dereference and `&` t
 
 ::right::
 
-```go{none|1-14|16-18|16-18|16-17|18|all}{at:3}
+```go{none|1-13|1-13|15-17|15-17|19-22|19-22}{at:1}
 string = ""
 [u|]int[|8|16|32|64], float[32|64], complex[64|128] = 0
 byte, rune = 0
@@ -664,13 +673,13 @@ For in all its forms
 
 <v-clicks>
 
-Similar as other languages but without () and mandatory {}
+Similar as other languages but without `()` and mandatory `{}`
 
 Only `for` kewyord exist for loops
 
 Can be interrupted with the `break` keyword
 
-About the for-range syntax:
+Meaning of the two variables in the `for-range` syntax
 <table>
   <tr>
     <th>type</th>
@@ -739,7 +748,7 @@ A __package__ is a __set of symbols__ (functions, types, variables) that can be 
 All Go files in the same package must have the same package declaration at the beginning of the file
 
 ```go
-package myPackage
+package myImage
 ```
 
 Importing a package differs if it comes from the standard library (`package_path`) or from a third-party `"module_path/package_path"`)
@@ -976,12 +985,12 @@ To add elements to a slice we can use the `append` builtin function
 
 <v-click>
 
-Both arrays and slices can be accessed by index
+Arrays and slices can be accessed by index
 </v-click>
 
 <v-click>
 
-Both arrays and slices can be subsliced: a subslice is a subset of the original array/slice
+Arrays and slices can be subsliced: a subslice is a subset of the original array/slice
 </v-click>
 
 ::right::
@@ -1234,6 +1243,8 @@ transition: fade-out
 
 Basic elements of the Go concurrency framework
 
+<v-clicks>
+
 ## Goroutines
 
 Units of concurrent execution in Go
@@ -1252,6 +1263,8 @@ Internal type that can be used to:
 - Send and receive data from goroutines
 - Synchronize goroutines
 
+</v-clicks>
+
 ---
 transition: fade-out
 ---
@@ -1259,6 +1272,8 @@ transition: fade-out
 ## Channels continued
 
 Share by communicating
+
+<v-clicks>
 
 Channels must be initialized before usage with the `make` builtin function
 
@@ -1271,11 +1286,16 @@ go func() { a <- 4 }()
 go func() { b <- 5 }()
 fmt.Println(<-a * <-b)
 ```
+</v-clicks>
+
+<v-clicks>
 
 - When `<-` is on the right of the channel, it means send to the channel. The correspondent goroutine is called __sender__
 - When `<-` is on the left of the channel, it means receive from the channel. The correspondent goroutine is called __receiver__
 - __Unbuffered channel__: the sender is blocked until a receiver is available
 - __Buffered channel__: the sender is not blocked before the buffer is full and then it waits for an available receiver
+
+</v-clicks>
 
 ---
 transition: fade-out
@@ -1284,6 +1304,8 @@ transition: fade-out
 # Looping on channels
 
 Another usage of for-range
+
+<v-clicks>
 
 `for v := range c {}`
 
@@ -1304,6 +1326,7 @@ for v := range n {
   fmt.Println(v) 
 }
 ```
+</v-clicks>
 
 ---
 transition: fade-out
@@ -1316,6 +1339,8 @@ Synchronization structure of the standard library
 
 ::left::
 
+<v-clicks>
+
 WaitGroup is a custom type of the `sync` package
 
 It makes sure that a group of goroutine ends once they are done
@@ -1327,6 +1352,8 @@ It defines 3 methods
   - to make a goroutine wait for the others to be done
 - Done()
   - to signal that waiting goroutine should not wait on the caller anymore
+
+</v-clicks>
 
 ::right::
 
@@ -1501,8 +1528,6 @@ You can use the [Go Playground](https://go.dev/play/) to quickly write and test 
 You can look up here for the [official documentation of Go](https://go.dev/doc/) and the [list of packages](https://pkg.go.dev/)
 
 The workshop’s Github repo is public at [https://github.com/mcaci/lets-go-workshop](https://github.com/mcaci/lets-go-workshop)
-
-And I hope you had a first positive impact with Go
 
 ---
 layout: lblue-end
