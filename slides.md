@@ -352,8 +352,8 @@ There are two ways to declare variables
 
 <v-clicks>
 
-- short initialization := operator
-- var keyword
+- short initialization `:=` operator
+- `var` keyword
     - Unlike other languages, __the type always goes after the name__
 
 </v-clicks>
