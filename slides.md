@@ -91,7 +91,7 @@ What do you expect from the workshop?
 
 ## Today’s plan
 
-Have a non complete hands-on introduction to Go with theory and exercises
+Have a hands-on introduction to Go with theory and exercises
 
 - Introduction
 - The tools needed for today
