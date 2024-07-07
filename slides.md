@@ -132,7 +132,7 @@ background-size: 150%
 
 A full ecosystem of language, toolchain and resources
 
-<v-clicks depth="2">
+<v-clicks>
 
 - Developed at Google since 2009
   - Open source
