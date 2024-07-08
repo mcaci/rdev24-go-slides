@@ -85,7 +85,7 @@ Why do you want to learn Go?
 
 What’s your background?
 
-What do you expect from the workshop?
+Do you have some familiarity with Go already?
 
 <v-click>
 
