@@ -808,6 +808,7 @@ Drawing a rectangle and writing the text to it: use pkg.go.dev to read the conte
 
 1. Create a function that draws a rectangle (`image` and `image/color`)
     - `New(l, h int, c color.RGBA) *image.Paletted`
+    - Use `palette.Plan9` when creating a new `image.Paletted` object (`image/color/palette`)
 2. Store the rectangle in a PNG file (`image/png`)
 3. Create a function that writes the text over the image
     - import `github.com/golang/freetype`
