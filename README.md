@@ -1,6 +1,6 @@
-# Step up your Go game with these few simple gems
+# Want to learn a new language? Let's Go
 
-These are the slides for the lightning talk to give at gceu2024b.
+These are the slides for the lightning talk to give at the workshop of RivieraDEV.
 
 To start the slide show:
 
