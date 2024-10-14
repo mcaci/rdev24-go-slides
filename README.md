@@ -10,4 +10,4 @@ To start the slide show:
 
 The slides have built with [Slidev](https://github.com/slidevjs/slidev).
 
-[Here](https://mcaci.github.io/gceub24-LT-slides/) is the link to the presentation itself.
+[Here](https://mcaci.github.io/rdev24-go-slides/) is the link to the presentation itself.
